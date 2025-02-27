@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>Course Details</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <section>
+        <h2>Computer Science Course Details</h2>
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Instructor</th>
+            </tr>
+            <tr>
+                <td>CS-3331</td>
+                <td>Fundamentals of Artificial Intelligence</td>
+                <td>Approaches to the definition of artificial intelligence and to the design and implementation of intelligent 		computer systems.</td>
+                <td>Dr. R. Cop</td>
+            </tr>
+            <tr>
+                <td>CS-4445</td>
+                <td>Data Comm and Networking</td>
+                <td>An overview of local-area and wide-area systems. Issues discussed include standards, topologies, management, 		communication protocol and security.</td>
+                <td>Dr. R. Cop</td>
+            </tr>
+        </table>
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll("nav a");
+        let currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>

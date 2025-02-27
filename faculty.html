@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty & Staff</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>Faculty & Staff</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <section>
+        <h2>Meet Our Faculty</h2>
+        <table>
+            <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Biography</th>
+            </tr>
+            <tr>
+                <td><img src="Sebastian_shaw.jpg" alt="Faculty 1" width="100"></td>
+                <td>Dr. A. Skywalker</td>
+                <td>Professor of Introduction to Computer Science and Software Engineering.</td>
+            </tr>
+            <tr>
+                <td><img src="Peter_Weller.jpg" alt="Faculty 2" width="100"></td>
+                <td>Dr. R. Cop</td>
+                <td>Professor of Fundamentals of Artificial Intelligence and Data Networking. </td>
+            </tr>
+	    <tr>
+                <td><img src="Harrison_Ford.jpg" alt="Faculty 2" width="100"></td>
+                <td>Professor I. Jones</td>
+                <td>Professor of Data Structures and Cybersecurity.</td>
+            </tr>
+	    <tr>
+                <td><img src="Patrick_Stewart.jpg" alt="Faculty 2" width="100"></td>
+                <td>Professor C. Xavier</td>
+                <td>Professor of Database Management and Operating Systems.</td>
+            </tr>
+        </table>
+    </section>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll("nav a");
+        let currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>

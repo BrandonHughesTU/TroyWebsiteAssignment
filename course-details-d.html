@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>Course Details</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <section>
+        <h2>Computer Science Course Details</h2>
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Instructor</th>
+            </tr>
+            <tr>
+                <td>CS-4420</td>
+                <td>Database Management</td>
+                <td>The fundamental concepts and structures necessary for the design and implementation of a database management 		system.</td>
+                <td>Professor C. Xavier</td>
+            </tr>
+            <tr>
+                <td>CS-4448</td>
+                <td>Operating Systems</td>
+                <td>An overview of operating system functions and com- ponents. Issues include process definition, sche- duling, and 		memory management.</td>
+                <td>Professor C. Xavier</td>
+            </tr>
+        </table>
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll("nav a");
+        let currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>Computer Science Courses</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <section>
+        <h2>Available Courses</h2>
+        <ul>
+            <li><a href="course-details.html">CS-2250 Introduction to Computer Science</a></li>
+            <li><a href="course-details-c.html">CS-3323 Data Structures</a></li>
+            <li><a href="course-details-d.html">CS-4420 Database Management Systems</a></li>
+            <li><a href="course-details-b.html">CS-4445 Data Comm and Networking</a></li>
+            <li><a href="course-details-d.html">CS-4448 Operating Systems</a></li>
+            <li><a href="course-details.html">CS-3332 Software Engineering</a></li>
+            <li><a href="course-details-c.html">CS-3334 Cybersecurity</a></li>
+            <li><a href="course-details-b.html">CS-3331 Fundamentals of Artificial Intelligence</a></li>
+        </ul>
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll("nav a");
+        let currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>

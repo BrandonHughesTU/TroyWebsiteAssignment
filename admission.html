@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application/Admission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>Applications for Computer Science Classes</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <section>
+        <h2>Apply Now</h2>
+        <form>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+            
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zipcode" required>
+            
+            <label for="interest">Interest Area:</label>
+            <select id="interest" name="interest">
+                <option value="software-engineering">Software Engineering</option>
+                <option value="data-structures">Data Structures</option>
+                <option value="cyber-security">Cybersecurity</option>
+		<option value="intro-computer-science">Intro to Computer Science</option>
+                <option value="operating-systems">Operating Systems</option>
+                <option value="artificial-intelligence">Fundamentals of Artificial Intelligence</option>
+		<option value="data-comm-networking">Data Comm and Networking</option>
+                <option value="data-base-management-systems">Database Management Systems</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll("nav a");
+        let currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>

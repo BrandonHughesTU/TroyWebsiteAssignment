@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <header>Course Details</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Faculty</a>
+        <a href="courses.html">Courses</a>
+        <a href="admission.html">Admissions</a>
+        <a href="about.html">About Us</a>
+    </nav>
+    <section>
+        <h2>Computer Science Course Details</h2>
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Instructor</th>
+            </tr>
+            <tr>
+                <td>CS-3323</td>
+                <td>Data Structures</td>
+                <td>A survey of data structures that includes lists, ordered lists, linked lists, stacks, queues and trees.</td>
+                <td>Professor I. Jones</td>
+            </tr>
+            <tr>
+                <td>CS-3334</td>
+                <td>Cybersecurity</td>
+                <td>Course provides an introduction to cyber security. Topics include security protocols and policies, basic 			cryptography, various kinds of cyber threats and defenses, secure software design, key management, attack modeling 		and risk analysis.</td>
+                <td>Professor I. Jones</td>
+            </tr>
+        </table>
+    </section>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let navLinks = document.querySelectorAll("nav a");
+        let currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
